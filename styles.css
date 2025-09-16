@@ -1,0 +1,37 @@
+html,
+body {
+  font-family: "Cairo", sans-serif;
+  min-height: 100vh;
+}
+
+.page-wrap {
+  min-height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 36px;
+  padding-bottom: 40px;
+}
+
+body {
+  background: linear-gradient(to right, #0f7a9a, #2db6a8, #9aa7d2);
+}
+
+.content .text .border-divider {
+  height: 2px;
+  opacity: 0.4;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.1450980392), #fff, rgba(255, 255, 255, 0.1921568627));
+}
+.content .text .title {
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.content .text .sub_title {
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  opacity: 0.8;
+  margin-bottom: 24px;
+}
