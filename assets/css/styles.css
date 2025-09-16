@@ -43,7 +43,7 @@ a {
 }
 @media (max-width: 427px) {
   .body-box .img-box img {
-    height: 60px;
+    height: 90px;
   }
 }
 .body-box .content {
@@ -62,7 +62,7 @@ a {
 }
 @media (max-width: 427px) {
   .body-box .content .text_box .name {
-    font-size: 1.5rem;
+    font-size: 22px;
   }
 }
 .body-box .content .text_box .sub_name {
@@ -72,7 +72,7 @@ a {
 }
 @media (max-width: 427px) {
   .body-box .content .text_box .sub_name {
-    font-size: 0.75rem;
+    font-size: 16px;
   }
 }
 .body-box .content .contact {
