@@ -21,6 +21,23 @@ a {
   @media (max-width: 427px) {
     padding: 55px 0;
   }
+
+  &:before {
+    z-index: 1;
+    opacity: 0.4;
+    content: "";
+    background-image: url(../images/index.png), url(../images/index2.png);
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-animation: snow 10s linear infinite;
+    -moz-animation: snow 10s linear infinite;
+    -ms-animation: snow 10s linear infinite;
+    animation: snow 10s linear infinite;
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -47,9 +64,24 @@ a {
       width: 90%;
     }
     .text_box {
+      padding-bottom: 16px;
+      margin-bottom: 40px;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0.5;
+        width: 75%;
+        height: 2px;
+        background: linear-gradient(135deg, #ffffff20, #fff, #ffffff20);
+      }
       .name {
         font-size: 3rem;
         color: #fff;
+        font-weight: 700;
         text-align: center;
         margin-bottom: 1rem;
         @media (max-width: 427px) {
@@ -66,7 +98,6 @@ a {
       }
     }
     .contact {
-      padding-top: 80px;
       display: flex;
       align-items: center;
       flex-direction: column;
@@ -117,6 +148,7 @@ a {
             font-size: 1.5rem;
           }
         }
+
         &::after {
           z-index: -1;
           content: "";
@@ -131,26 +163,40 @@ a {
           border-radius: 50%;
           transform: translate(-25px, 8px) rotate(55deg);
         }
-        &.facebook-link::after {
-          background: linear-gradient(135deg, #3b5998, #8b9dc3);
+        &.facebook-link {
+          &::after {
+            background: linear-gradient(135deg, #3b5998, #8b9dc3);
+          }
         }
-        &.telegram-link::after {
-          background: linear-gradient(135deg, #0088cc, #00bfff);
+        &.telegram-link {
+          &::after {
+            background: linear-gradient(135deg, #0088cc, #00bfff);
+          }
         }
-        &.twitter-link::after {
-          background: linear-gradient(135deg, #1da1f2, #a0d3e8);
+        &.twitter-link {
+          &::after {
+            background: linear-gradient(135deg, #1da1f2, #a0d3e8);
+          }
         }
-        &.instagram-link::after {
-          background: linear-gradient(135deg, #e1306c, #fcb045);
+        &.instagram-link {
+          &::after {
+            background: linear-gradient(135deg, #e1306c, #fcb045);
+          }
         }
-        &.linkedin-link::after {
-          background: linear-gradient(135deg, #0077b5, #00a0dc);
+        &.linkedin-link {
+          &::after {
+            background: linear-gradient(135deg, #0077b5, #00a0dc);
+          }
         }
-        &.whatsapp-link::after {
-          background: linear-gradient(135deg, #25d366, #128c7e);
+        &.whatsapp-link {
+          &::after {
+            background: linear-gradient(135deg, #25d366, #128c7e);
+          }
         }
-        &.location-link::after {
-          background: linear-gradient(135deg, #ff5722, #ff8a65);
+        &.location-link {
+          &::after {
+            background: linear-gradient(135deg, #ff5722, #ff8a65);
+          }
         }
         @media (max-width: 427px) {
           font-size: 18px;
@@ -165,5 +211,50 @@ a {
         }
       }
     }
+  }
+}
+
+@keyframes snow {
+  0% {
+    background-position: 0 0, 0 0, 0 0;
+  }
+  50% {
+    background-position: 500px 500px, 100px 200px, -100px 150px;
+  }
+  100% {
+    background-position: 500px 1000px, 200px 400px, -100px 300px;
+  }
+}
+@-moz-keyframes snow {
+  0% {
+    background-position: 0 0, 0 0, 0 0;
+  }
+  50% {
+    background-position: 500px 500px, 100px 200px, -100px 150px;
+  }
+  100% {
+    background-position: 400px 1000px, 200px 400px, 100px 300px;
+  }
+}
+@-webkit-keyframes snow {
+  0% {
+    background-position: 0 0, 0 0, 0 0;
+  }
+  50% {
+    background-position: 500px 500px, 100px 200px, -100px 150px;
+  }
+  100% {
+    background-position: 500px 1000px, 200px 400px, -100px 300px;
+  }
+}
+@-ms-keyframes snow {
+  0% {
+    background-position: 0 0, 0 0, 0 0;
+  }
+  50% {
+    background-position: 500px 500px, 100px 200px, -100px 150px;
+  }
+  100% {
+    background-position: 500px 1000px, 200px 400px, -100px 300px;
   }
 }

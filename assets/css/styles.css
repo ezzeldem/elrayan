@@ -24,6 +24,18 @@ a {
     padding: 55px 0;
   }
 }
+.body-box:before {
+  z-index: 1;
+  opacity: 0.4;
+  content: "";
+  background-image: url(../images/index.png), url(../images/index2.png);
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  animation: snow 10s linear infinite;
+}
 .body-box::after {
   content: "";
   position: absolute;
@@ -54,9 +66,26 @@ a {
     width: 90%;
   }
 }
+.body-box .content .text_box {
+  padding-bottom: 16px;
+  margin-bottom: 40px;
+  position: relative;
+}
+.body-box .content .text_box::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.5;
+  width: 75%;
+  height: 2px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1254901961), #fff, rgba(255, 255, 255, 0.1254901961));
+}
 .body-box .content .text_box .name {
   font-size: 3rem;
   color: #fff;
+  font-weight: 700;
   text-align: center;
   margin-bottom: 1rem;
 }
@@ -76,7 +105,6 @@ a {
   }
 }
 .body-box .content .contact {
-  padding-top: 80px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -178,5 +206,17 @@ a {
   .body-box .content .contact a::after {
     transform: translate(-25px, 8px) rotate(3deg);
     width: 29%;
+  }
+}
+
+@keyframes snow {
+  0% {
+    background-position: 0 0, 0 0, 0 0;
+  }
+  50% {
+    background-position: 500px 500px, 100px 200px, -100px 150px;
+  }
+  100% {
+    background-position: 500px 1000px, 200px 400px, -100px 300px;
   }
 }
