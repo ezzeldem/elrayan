@@ -76,9 +76,9 @@ a {
         backdrop-filter: blur(10px);
         overflow: hidden;
         z-index: 1;
+
         span {
           display: block;
-          width: 80%;
         }
         &:hover {
           box-shadow: 0 4px 15px rgba(255, 255, 255, 0.338);
@@ -135,11 +135,18 @@ a {
           background: linear-gradient(135deg, #25d366, #128c7e);
         }
         &.location-link::after {
-          background: linear-gradient(
-            135deg,
-            #ff5722,
-            #ff8a65
-          ); // Example gradient for location
+          background: linear-gradient(135deg, #ff5722, #ff8a65);
+        }
+        @media (max-width: 427px) {
+          font-size: 18px;
+          width: 100%;
+        }
+        @media (max-width: 327px) {
+          font-size: 13px;
+          &::after {
+            transform: translate(-25px, 8px) rotate(3deg);
+            width: 29%;
+          }
         }
       }
     }

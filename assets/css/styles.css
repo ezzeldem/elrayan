@@ -83,7 +83,6 @@ a {
 }
 .body-box .content .contact a span {
   display: block;
-  width: 80%;
 }
 .body-box .content .contact a:hover {
   box-shadow: 0 4px 15px rgba(255, 255, 255, 0.338);
@@ -140,4 +139,19 @@ a {
 }
 .body-box .content .contact a.location-link::after {
   background: linear-gradient(135deg, #ff5722, #ff8a65);
+}
+@media (max-width: 427px) {
+  .body-box .content .contact a {
+    font-size: 18px;
+    width: 100%;
+  }
+}
+@media (max-width: 327px) {
+  .body-box .content .contact a {
+    font-size: 13px;
+  }
+  .body-box .content .contact a::after {
+    transform: translate(-25px, 8px) rotate(3deg);
+    width: 29%;
+  }
 }
