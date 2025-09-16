@@ -1,0 +1,143 @@
+html,
+body {
+  font-family: "Cairo", sans-serif;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+.body-box {
+  min-height: 100vh;
+  background-image: url("../images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+  position: relative;
+  display: flex;
+  padding-top: 80px;
+  justify-content: center;
+}
+.body-box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: -1;
+}
+.body-box .img-box {
+  text-align: center;
+  padding-bottom: 24px;
+}
+.body-box .img-box img {
+  height: 130px;
+}
+.body-box .content {
+  width: 20%;
+}
+@media (max-width: 1020px) {
+  .body-box .content {
+    width: 90%;
+  }
+}
+.body-box .content .text_box .name {
+  font-size: 3rem;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.body-box .content .text_box .sub_name {
+  font-size: 1.5rem;
+  color: #fff;
+  text-align: center;
+}
+.body-box .content .contact {
+  padding-top: 80px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 24px;
+}
+.body-box .content .contact a {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  min-width: 200px;
+  transition: 0.3s ease;
+  color: #fff;
+  padding: 24px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2117647059);
+  position: relative;
+  font-size: 24px;
+  background-color: rgba(255, 255, 255, 0.063);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  overflow: hidden;
+  z-index: 1;
+}
+.body-box .content .contact a span {
+  display: block;
+  width: 80%;
+}
+.body-box .content .contact a:hover {
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.338);
+  transform: translateY(-10px);
+}
+.body-box .content .contact a:hover i {
+  top: 50%;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  transform: scale(1.2) translateY(-50%);
+}
+.body-box .content .contact a:hover::after {
+  transform: scale(5) translate(-25px, 8px) rotate(0) translateY(-10px);
+  width: 100%;
+}
+.body-box .content .contact a i {
+  position: absolute;
+  left: 20px;
+  top: 58%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  transition: 0.3s ease;
+}
+.body-box .content .contact a::after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 23%;
+  height: 140%;
+  background-color: rgba(255, 255, 255, 0.289);
+  border-radius: 8px;
+  transition: 0.3s ease;
+  border-radius: 50%;
+  transform: translate(-25px, 8px) rotate(55deg);
+}
+.body-box .content .contact a.facebook-link::after {
+  background: linear-gradient(135deg, #3b5998, #8b9dc3);
+}
+.body-box .content .contact a.telegram-link::after {
+  background: linear-gradient(135deg, #0088cc, #00bfff);
+}
+.body-box .content .contact a.twitter-link::after {
+  background: linear-gradient(135deg, #1da1f2, #a0d3e8);
+}
+.body-box .content .contact a.instagram-link::after {
+  background: linear-gradient(135deg, #e1306c, #fcb045);
+}
+.body-box .content .contact a.linkedin-link::after {
+  background: linear-gradient(135deg, #0077b5, #00a0dc);
+}
+.body-box .content .contact a.whatsapp-link::after {
+  background: linear-gradient(135deg, #25d366, #128c7e);
+}
+.body-box .content .contact a.location-link::after {
+  background: linear-gradient(135deg, #ff5722, #ff8a65);
+}
