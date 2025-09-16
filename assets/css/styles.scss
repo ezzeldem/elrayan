@@ -15,9 +15,12 @@ a {
   z-index: 1;
   position: relative;
   display: flex;
-  padding-top: 80px;
+  padding: 80px 0;
   justify-content: center;
   //   align-items: center;
+  @media (max-width: 427px) {
+    padding: 55px 0;
+  }
   &::after {
     content: "";
     position: absolute;
@@ -33,6 +36,9 @@ a {
     padding-bottom: 24px;
     img {
       height: 130px;
+      @media (max-width: 427px) {
+        height: 60px;
+      }
     }
   }
   .content {
@@ -46,11 +52,17 @@ a {
         color: #fff;
         text-align: center;
         margin-bottom: 1rem;
+        @media (max-width: 427px) {
+          font-size: 1.5rem;
+        }
       }
       .sub_name {
         font-size: 1.5rem;
         color: #fff;
         text-align: center;
+        @media (max-width: 427px) {
+          font-size: 0.75rem;
+        }
       }
     }
     .contact {
@@ -101,6 +113,9 @@ a {
           transform: translateY(-50%);
           font-size: 30px;
           transition: 0.3s ease;
+          @media (max-width: 427px) {
+            font-size: 1.5rem;
+          }
         }
         &::after {
           z-index: -1;

@@ -16,8 +16,13 @@ a {
   z-index: 1;
   position: relative;
   display: flex;
-  padding-top: 80px;
+  padding: 80px 0;
   justify-content: center;
+}
+@media (max-width: 427px) {
+  .body-box {
+    padding: 55px 0;
+  }
 }
 .body-box::after {
   content: "";
@@ -36,6 +41,11 @@ a {
 .body-box .img-box img {
   height: 130px;
 }
+@media (max-width: 427px) {
+  .body-box .img-box img {
+    height: 60px;
+  }
+}
 .body-box .content {
   width: 20%;
 }
@@ -50,10 +60,20 @@ a {
   text-align: center;
   margin-bottom: 1rem;
 }
+@media (max-width: 427px) {
+  .body-box .content .text_box .name {
+    font-size: 1.5rem;
+  }
+}
 .body-box .content .text_box .sub_name {
   font-size: 1.5rem;
   color: #fff;
   text-align: center;
+}
+@media (max-width: 427px) {
+  .body-box .content .text_box .sub_name {
+    font-size: 0.75rem;
+  }
 }
 .body-box .content .contact {
   padding-top: 80px;
@@ -104,6 +124,11 @@ a {
   transform: translateY(-50%);
   font-size: 30px;
   transition: 0.3s ease;
+}
+@media (max-width: 427px) {
+  .body-box .content .contact a i {
+    font-size: 1.5rem;
+  }
 }
 .body-box .content .contact a::after {
   z-index: -1;
