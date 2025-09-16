@@ -91,7 +91,7 @@ a {
 }
 @media (max-width: 427px) {
   .body-box .content .text_box .name {
-    font-size: 22px;
+    font-size: 28px;
   }
 }
 .body-box .content .text_box .sub_name {
@@ -116,6 +116,7 @@ a {
   justify-content: center;
   width: 100%;
   min-width: 200px;
+  font-weight: 600;
   transition: 0.3s ease;
   color: #fff;
   padding: 24px;
