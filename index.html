@@ -21,7 +21,11 @@
       href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap"
       rel="stylesheet"
     /><link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="./assets/images/logo.png" as="image">
+    <link rel="preload" href="./assets/images/background.jpg" as="image">
+    <link rel="preload" href="./assets/css/styles.css" as="style">
 
     <link rel="stylesheet" href="./assets/css/styles.css" />
   </head>
@@ -44,7 +48,7 @@
     <div class="body-box">
       <div class="content">
         <div class="img-box">
-          <img src="./assets/images/logo.png" alt="باب الريان" class="img-fluid logo-animated">
+          <img src="./assets/images/logo.png" alt="باب الريان" loading="lazy" class="img-fluid logo-animated">
         </div>
         <div class="text_box">
           <h1 class="name">باب الريان</h1>
@@ -109,5 +113,7 @@
     <script>
       AOS.init();
     </script>
+    <!-- Cache Manager for localStorage optimization -->
+    <script src="./assets/js/cache-manager.js"></script>
   </body>
 </html>
